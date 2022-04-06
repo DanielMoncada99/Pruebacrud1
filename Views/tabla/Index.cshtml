@@ -1,0 +1,37 @@
+﻿@model List<Pruebacrud.Models.viewmodels.Listtablaviewmodel>
+@{
+    ViewBag.Title = "Mis datos";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="text-align:right;padding:5px;">
+    <a href="~/Tabla/Nuevo" class="btn btn-primary">Nuevo</a>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>Nombre de pelicula</th>
+                <th>Genero</th>
+                <th></th>
+            </tr>
+            @foreach (var oElemento in Model)
+            {
+        <tr>
+            <td>@oElemento.Id</td>
+            <td>@oElemento.Nombre_de_pelicula</td>
+            <td>@oElemento.Genero</td>
+            <td>@oElemento.Fecha_compra</td>
+            <td>
+                <a class="btn btn-default" href="~/Tabla/Editar/@oElemento.Id">Editar</a>
+                <a class="btn btn-danger" href="~/Tabla/Eliminar/@oElemento.Id">Eliminar</a>
+            </td>
+        </tr>
+
+            }
+        </table>
+    </div>
+
+</div>

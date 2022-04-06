@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CrudModelStoreContainer" CdmEntityContainer="CrudEntities">
+    <EntitySetMapping Name="tabla">
+      <EntityTypeMapping TypeName="CrudModel.tabla">
+        <MappingFragment StoreEntitySet="tabla">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_de_pelicula" ColumnName="nombre_de_pelicula" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="fecha_compra" ColumnName="fecha_compra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

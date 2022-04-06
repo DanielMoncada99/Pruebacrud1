@@ -1,0 +1,36 @@
+﻿@model Pruebacrud.Models.viewmodels.tablaviewmodel
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm("Nuevo", "Tabla", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                @Html.LabelFor(d => d.Nombre_de_pelicula)
+                @Html.TextBoxFor(d => d.Nombre_de_pelicula, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Nombre_de_pelicula, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Genero)
+                @Html.TextBoxFor(d => d.Genero, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Genero, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Fecha_compra)<br />
+                @Html.EditorFor(d => d.Fecha_compra, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Fecha_compra, null, new { @class = "red" })
+            </div>
+            <br />
+            <div style="text-align:right;">
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+        </div>
+
+    </div>
+}
+
